@@ -1,0 +1,4 @@
+dependencies {
+    // p6spy (Log SQL Query Parameter) <- Spring Boot 3.0 지원 X (해결 방법 참고 : https://www.inflearn.com/questions/721332/spring-boot-3-0-0-%EC%97%90%EC%84%9C-p6spy-%EC%A0%81%EC%9A%A9%EC%9D%B4-%EC%95%88%EB%90%A9%EB%8B%88%EB%8B%A4)
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.0'
+}

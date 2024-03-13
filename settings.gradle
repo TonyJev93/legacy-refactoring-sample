@@ -1,0 +1,31 @@
+rootProject.name = 'card-service-poc'
+
+include 'bootstrap'
+include 'common:adapter-in'
+
+includeSubprojects(
+        'legacy',
+        [
+                'cashback:cashback-adapter-in',
+                'cashback:cashback-application',
+                'usage-result:usage-result-adapter-in',
+                'usage-result:usage-result-application',
+        ]
+)
+
+includeSubprojects(
+        'refactoring',
+        [
+                'cashback:cashback-adapter-in',
+                'cashback:cashback-application',
+                'usage-result:usage-result-adapter-in',
+                'usage-result:usage-result-application',
+        ]
+)
+
+private void includeSubprojects(String rootDir, List<String> subprojects) {
+    subprojects.each {
+        subproject ->
+            include "$rootDir:${subproject}"
+    }
+}

@@ -1,0 +1,6 @@
+apply plugin: 'java-test-fixtures'
+
+dependencies {
+    testFixturesCompileOnly 'org.projectlombok:lombok'
+    testFixturesImplementation 'org.springframework:spring-test' // for. ReflectionTestUtils
+}

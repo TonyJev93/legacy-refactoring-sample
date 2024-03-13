@@ -1,0 +1,5 @@
+dependencies {
+    // 주의점 : Mapstruct 는 Lombok 의 getter, setter, builder 를 이용 하여 생성 하므로 Lombok Dependency 보다 뒤에 선언 되어야 함.
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+}

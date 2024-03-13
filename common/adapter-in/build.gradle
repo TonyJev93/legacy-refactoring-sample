@@ -1,0 +1,3 @@
+apply from: rootProject.file('gradle/common-adapter.gradle')
+apply from: rootProject.file('gradle/lib/jackson.gradle')
+apply from: rootProject.file('gradle/lib/commons-lang3.gradle') // for. Apache Lang Library - ExceptionUtils.getStackTrace 쓰기 위해 사용

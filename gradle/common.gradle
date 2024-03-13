@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.card.service.poc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+class CommonFunction {
+    private void includeLegacyModule(String[] moduleNames) {
+        moduleNames.each {
+            moduleName ->
+                include "refactoring:${moduleName}"
+        }
+    }
+
+    private void includeRefactoringModule(String[] moduleNames) {
+        moduleNames.each {
+            moduleName ->
+                include"refactoring:${moduleName}"
+        }
+    }
+}

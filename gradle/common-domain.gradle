@@ -1,0 +1,9 @@
+apply from: rootProject.file('gradle/common.gradle')
+
+dependencies {
+    implementation 'org.springframework:spring-core'
+}
+
+bootJar {
+    enabled = false
+}

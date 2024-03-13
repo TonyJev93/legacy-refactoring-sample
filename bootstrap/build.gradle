@@ -1,0 +1,8 @@
+apply from: rootProject.file('gradle/common-bootstrap.gradle')
+
+dependencies {
+    /* implementation */
+    implementation project(":refactoring:cashback:cashback-adapter-in")
+    implementation project(":legacy:usage-result:usage-result-adapter-in")
+}
+

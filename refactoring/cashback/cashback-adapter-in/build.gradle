@@ -1,0 +1,6 @@
+apply from: rootProject.file('gradle/common-adapter.gradle')
+
+dependencies {
+    implementation project(':common:adapter-in')
+    implementation project(":refactoring:cashback:cashback-application")
+}

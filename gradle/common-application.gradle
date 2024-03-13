@@ -1,0 +1,14 @@
+apply from: rootProject.file('gradle/common.gradle')
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services' // for. Exception의 HttpStatus 응답 사용
+    implementation 'org.springframework:spring-tx' // for. Transactional
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootJar {
+    enabled = false
+}
